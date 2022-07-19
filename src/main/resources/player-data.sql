@@ -1,15 +1,14 @@
 INSERT INTO `player` (
 	`id`,
-    `name`, 
-    `position`,
     `age`,
-    `position`
-    )
-    
+    `name`, 
+    `nationality`,
+    `position`    
+)
 VALUES (
 	default,
-	'Lewis Pearson',
-	'Left Back',
     23,
-	'Scottish'
-    )
+	'Lewis Pearson',
+    'Scottish',
+	'Left Back'
+);

@@ -28,7 +28,8 @@ import com.qa.may.entity.Player;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-@Sql(scripts = {"classpath:player-schema.sql", "classpath:player-data.sql"}, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(scripts = { "classpath:player-schema.sql",
+			     "classpath:player-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 @ActiveProfiles("test")
 public class PlayerControllerIntegrationTest {
 	
