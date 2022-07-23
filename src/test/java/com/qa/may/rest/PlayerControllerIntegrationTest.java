@@ -3,6 +3,7 @@ package com.qa.may.rest;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -60,12 +61,28 @@ public class PlayerControllerIntegrationTest {
 		
 		RequestBuilder req = get("/getPlayers");
 		ResultMatcher checkStatus = status().is(200);
-		this.mvc.perform(req).andExpect(checkStatus).andExpect(content().json(this.mapper.writeValueAsString(players)));
+		this.mvc.perform(req).andExpect(checkStatus)
+						.andExpect(content().json(this.mapper.writeValueAsString(players)));
+	}
+	
+	@Test
+	void testReadById() throws Exception{
+		RequestBuilder req = get("/getPlayer/1");
+		ResultMatcher checkStatus= status().isOk();
+		this.mvc.perform(req).andExpect(checkStatus).andExpect(content().json(this.mapper.writeValueAsString(new Player(1, "Lewis Pearson", "Left Back", 23, "Scottish"))));
 	}
 	
 	@Test
 	void testDelete() throws Exception {
-		this.mvc.perform(delete("/removePlayer/1")).andExpect(status().isNoContent());
+		this.mvc.perform(delete("/deletePlayer/1")).andExpect(status().isNoContent());
 	}
+	
+	@Test
+	void testUpdate() throws Exception {
+		Player updated = new Player(1, "Lewis Pearson", "Left Back", 23, "Scottish");
+		this.mvc.perform(patch("/updatePlayer/1?name=Lewis Pearson&position=Left Back&age=23&nationality=Scottish"))
+						.andExpect(status().isOk()).andExpect(content().json(this.mapper.writeValueAsString(updated)));
+	}
+	
 
 }

@@ -50,7 +50,7 @@ public class PlayerController {
 		return this.service.update(id, name, position, nationality);
 	}
 	
-	@DeleteMapping("deletePlayer{id}")
+	@DeleteMapping("deletePlayer/{id}")
 	public ResponseEntity<?> delete(@PathVariable int id) {
 		this.service.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
