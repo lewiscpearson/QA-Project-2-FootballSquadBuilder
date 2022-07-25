@@ -83,29 +83,27 @@ public class Player {
 		this.nationality = nationality;
 	}
 
-//	@Override
-//	public int hashCode() {
-//		return Objects.hash(age, id, name, nationality, position);
-//	}
-//
-//	@Override
-//	public boolean equals(Object obj) {
-//		if (this == obj)
-//			return true;
-//		if (obj == null)
-//			return false;
-//		if (getClass() != obj.getClass())
-//			return false;
-//		Player other = (Player) obj;
-//		return age == other.age && Objects.equals(id, other.id) && Objects.equals(name, other.name)
-//				&& Objects.equals(nationality, other.nationality) && Objects.equals(position, other.position);
-//	}
-
 	@Override
 	public String toString() {
 		return "Player [id=" + id + ", name=" + name + ", position=" + position + ", age=" + age + ", nationality="
 				+ nationality + "]";
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(age, name, nationality, position);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Player other = (Player) obj;
+		return age == other.age && Objects.equals(name, other.name) && Objects.equals(nationality, other.nationality)
+				&& Objects.equals(position, other.position);
+	}
 }
