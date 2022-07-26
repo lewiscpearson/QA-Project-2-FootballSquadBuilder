@@ -1,6 +1,8 @@
 "use strict";
 
-document.querySelector("body > form").addEventListener("submit", function (event){
+const output = document.getElementById('output');
+
+document.getElementById('playerForm').addEventListener("submit", function (event){
     event.preventDefault();
     console.log("THIS: ", this);
 
@@ -24,7 +26,7 @@ document.querySelector("body > form").addEventListener("submit", function (event
     console.log("player: ", data);
 });
 
-const output = document.querySelector("#output")
+
 
 function renderPlayers() { 
     axios.get("http://localhost:8080/getPlayers/")
