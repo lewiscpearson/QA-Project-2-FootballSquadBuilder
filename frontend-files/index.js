@@ -58,17 +58,28 @@ function renderPlayers() {
                 playerDiv.appendChild(playerAge);
 
                 const playerNationality = document.createElement("p");
-                playerNationality.innerText = player.Nationality;
+                playerNationality.innerText = player.nationality;
                 playerDiv.appendChild(playerNationality);
             
 
                 const playerDelete = document.createElement('button');
                 playerDelete.innerText="DELETE";
+                playerDelete.className="btn btn-danger";
                 playerDelete.addEventListener("click", () => {
                     console.log("player: ", player);
-                    deleteplayer(player.id);
+                    deletePlayer(player.id);
                 });
                 playerDiv.appendChild(playerDelete);
+                
+                const playerUpdate = document.createElement('button');
+                playerUpdate.innerText="UPDATE";
+                playerUpdate.className="btn btn-info";
+                playerUpdate.addEventListener("click", () => {
+                    console.log("player: ", player);
+                    updatePlayer(player.id);
+                });
+                playerDiv.appendChild(playerUpdate);
+
 
                 output.appendChild(playerCol);
             }
