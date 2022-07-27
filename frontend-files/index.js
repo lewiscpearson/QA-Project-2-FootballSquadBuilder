@@ -95,4 +95,16 @@ const deletePlayer = (id) => {
             }).catch(err => console.error(err));
 }
 
+const updatePlayer = (id) => {
+    axois.post("http://localhost:8080/updatePlayer/", data)
+    .then(res => {
+        console.log("RES: ", res);
+        this.name.focus();
+        this.reset();
+        renderPlayers();
+    })
+
+}
+
+
 renderPlayers();
