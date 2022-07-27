@@ -96,7 +96,7 @@ const deletePlayer = (id) => {
 }
 
 const updatePlayer = (id) => {
-    axois.post("http://localhost:8080/updatePlayer/", data)
+    axois.patch("http://localhost:8080/updatePlayer/", data)
     .then(res => {
         console.log("RES: ", res);
         this.name.focus();
