@@ -47,12 +47,14 @@ public class PlayerServiceDB implements PlayerService{
 	}
 
 	@Override
-	public Player update(int id, String name, String position, String nationality) {
+	public Player update(int id, String name, String position, Integer age, String nationality) {
 		Player toUpdate = this.getById(id);
 		if (name !=null)
 			toUpdate.setName(name);
 		if (position != null)
 			toUpdate.setPosition(position);
+		if (age != null)
+			toUpdate.setAge(age);
 		if (nationality != null)
 			toUpdate.setNationality(nationality);
 		
@@ -64,5 +66,4 @@ public class PlayerServiceDB implements PlayerService{
 		this.repo.deleteById(id);
 		
 	}
-
 }

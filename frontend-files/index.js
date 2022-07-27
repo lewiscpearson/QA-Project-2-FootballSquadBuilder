@@ -6,8 +6,9 @@ document.getElementById('playerForm').addEventListener("submit", function (event
     event.preventDefault();
     console.log("THIS: ", this);
 
+  
     const data = {
-        name: this.name.value,
+        name: this.fullname.value,
         position: this.position.value,
         age: this.age.value,
         nationality: this.nationality.value        
@@ -17,7 +18,7 @@ document.getElementById('playerForm').addEventListener("submit", function (event
     axios.post("http://localhost:8080/createPlayer", data)
     .then(res => {
         console.log("RES: ", res);
-        this.name.focus();
+        this.fullname.focus();
         this.reset();
         renderPlayers();
     })
@@ -48,7 +49,7 @@ function renderPlayers() {
                 const playerName = document.createElement("h2");
                 playerName.innerText = player.name;
                 playerDiv.appendChild(playerName);
-
+                
                 const playerPosition = document.createElement("p");
                 playerPosition.innerText = player.position;
                 playerDiv.appendChild(playerPosition);
@@ -96,12 +97,14 @@ const deletePlayer = (id) => {
 }
 
 const updatePlayer = (id) => {
-    axois.patch("http://localhost:8080/updatePlayer/", data)
+    console.log("in update function " + this.age.value);
+    console.log("in update function " + this.fullname.value);
+   axios.patch("http://localhost:8080/updatePlayer/" + id + "?name=" + this.fullname.value + "&position=" + this.position.value
+    + "&age=" + this.age.value + "&nationality=" + this.nationality.value)
     .then(res => {
         console.log("RES: ", res);
-        this.name.focus();
-        this.reset();
         renderPlayers();
+        
     })
 
 }

@@ -32,7 +32,7 @@ public class PlayerController {
 		return this.service.getAll();
 	}
 	
-	@GetMapping("getPlayer/{id}")
+	@GetMapping("/getPlayer/{id}")
 	public Player getById(@PathVariable int id) {
 		return this.service.getById(id);
 	}
@@ -46,11 +46,11 @@ public class PlayerController {
 	}
 	
 	@PatchMapping("/updatePlayer/{id}")
-	public Player update(@PathVariable("id") int id, @PathParam("name") String name, @PathParam("position") String position, @PathParam("age") Integer age, @PathParam("natioanlity") String nationality) {
-		return this.service.update(id, name, position, nationality);
+	public Player update(@PathVariable int id, @PathParam("name") String name, @PathParam("position") String position, @PathParam("age") Integer age, @PathParam("natioanlity") String nationality) {
+		return this.service.update(id, name, position, age, nationality);
 	}
 	
-	@DeleteMapping("deletePlayer/{id}")
+	@DeleteMapping("/deletePlayer/{id}")
 	public ResponseEntity<?> delete(@PathVariable int id) {
 		this.service.delete(id);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);

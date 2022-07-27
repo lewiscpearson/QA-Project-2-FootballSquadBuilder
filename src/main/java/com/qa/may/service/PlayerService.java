@@ -18,7 +18,7 @@ public interface PlayerService {
 	
 	Player create(Player player);
 	
-	Player update(int id, String name, String position, String nationality);
+	Player update(int id, String name, String position, Integer age, String nationality);
 	
 	void delete(int id);
 
