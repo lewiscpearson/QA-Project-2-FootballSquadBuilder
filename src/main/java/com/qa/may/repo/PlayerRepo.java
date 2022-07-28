@@ -7,10 +7,5 @@ import com.qa.may.entity.Player;
 
 @Repository
 public interface PlayerRepo extends JpaRepository<Player, Integer>{
-//		Player findByNameStartingWithIgnoreCase(String name);
-//		
-//		Player findByPositionIgnoreCase(String position);
-//		
-//		Player findByNationalityIgnoreCase(String nationality);
 
 }

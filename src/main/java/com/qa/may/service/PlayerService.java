@@ -10,12 +10,6 @@ public interface PlayerService {
 	
 	List<Player> getAll();
 	
-//	Player findByName(String name);
-//	
-//	Player findByPosition (String position);
-//	
-//	Player findByNationality (String nationality);
-	
 	Player create(Player player);
 	
 	Player update(int id, String name, String position, Integer age, String nationality);

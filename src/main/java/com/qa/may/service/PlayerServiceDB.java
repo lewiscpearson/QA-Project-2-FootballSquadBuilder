@@ -26,21 +26,6 @@ public class PlayerServiceDB implements PlayerService{
 		return this.repo.findAll();
 	}
 
-//	@Override
-//	public Player findByName(String name) {
-//		return this.repo.findByNameStartingWithIgnoreCase(name);
-//	}
-//
-//	@Override
-//	public Player findByPosition(String position) {
-//		return this.repo.findByPositionIgnoreCase(position);
-//	}
-//
-//	@Override
-//	public Player findByNationality(String nationality) {
-//		return this.repo.findByNationalityIgnoreCase(nationality);
-//	}
-
 	@Override
 	public Player create(Player player) {
 		return this.repo.save(player);
