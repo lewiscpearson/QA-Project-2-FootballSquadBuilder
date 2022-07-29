@@ -45,12 +45,12 @@ Usage of the application is very straightforward, due to the user-friendly front
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 
-### Versioning
+## Versioning
 
 [Git with GitHub](http://GitHub.com/) was used for version control. The main/dev/feature branch model was used with regular commits to keep track of progress and preserve work in case of data loss.
 
 
-### Project Management
+## Project Management
 
 The project was managed through using a Scrum Board on Jira. User stories were created with tasks and story points assigned.
 
