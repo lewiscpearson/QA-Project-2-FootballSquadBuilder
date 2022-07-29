@@ -1,8 +1,6 @@
 # QA Project 2 - Football Squad Builder
 
-This is my second QA Academy project to design an application that is related to a hobby.
-
-This application allows users to create a football squad, by adding players with their age, nationality, and position. They can then view all players added, update existing players, or even delete them. 
+This application allows users to create a football squad, by adding players with their age, nationality, and position. They can then view all players added, update existing players, or even delete them. It is a fullstack application developed with a Java, Springboot, SQL backend and a HTML, CSS, and Javascript frontend.
 
 ## Getting started
 
@@ -25,12 +23,15 @@ To run the application the database will have to be created locally, and VS Code
 
 ### Database
 ERD for the Database used with the Application
+
 ![ERD Diagram](https://user-images.githubusercontent.com/105277446/181787649-ff273280-b1d9-4f54-b5a5-3033af5ae279.png)
 ### Backend
 UML diagram for the backend.
+
 ![UML drawio](https://user-images.githubusercontent.com/105277446/181787671-8194e168-bba4-493e-9da1-daba9a6d4705.png)
 ### Frontend
 Wireframe for the frontend web page.
+
 ![wireframe drawio](https://user-images.githubusercontent.com/105277446/181787678-e0d6cfd3-cab1-41c0-a38b-d6b176c12f58.png)
 
 ## Testing
