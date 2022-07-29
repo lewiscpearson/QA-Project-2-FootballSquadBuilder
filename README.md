@@ -1,5 +1,3 @@
-Coverage: 98.2%
-
 # QA Project 2 - Football Squad Builder
 
 This is my second QA Academy project to design an application that is related to a hobby.
@@ -35,7 +33,7 @@ UML diagram for the backend.
 Wireframe for the frontend web page.
 ![wireframe drawio](https://user-images.githubusercontent.com/105277446/181787678-e0d6cfd3-cab1-41c0-a38b-d6b176c12f58.png)
 
-##Testing
+## Testing
 Testing was done through JUnit, and a test coverage of 98.2% of the src/main/java path was achieved. Well above the industry standard of >80%. Tests cover all CRUD methods. 
 
 ## Usage
@@ -56,11 +54,11 @@ Usage of the application is very straightforward, due to the user-friendly front
 The project was managed through using a Scrum Board on Jira. User stories were created with tasks and story points assigned.
 
 ## Authors
-* **Lewis Pearson** - *Final project* - [lewispearson](https://github.com/LewisPearsonGitHub)
+* **Lewis Pearson**  - [lewispearson](https://github.com/LewisPearsonGitHub)
 
 ## License
 
 This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
 
-##Acknowledgements
+## Acknowledgements
 Thanks to QA, and the trainers Jordan Harrison and Jordan Benbelaid without whom this project would not have been possible.
