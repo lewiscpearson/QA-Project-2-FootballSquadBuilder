@@ -97,9 +97,7 @@ const deletePlayer = (id) => {
 }
 
 const updatePlayer = (id) => {
-    console.log("in update function " + this.age.value);
-    console.log("in update function " + this.fullname.value);
-   axios.patch("http://localhost:8080/updatePlayer/" + id + "?name=" + this.fullname.value + "&position=" + this.position.value
+    axios.patch("http://localhost:8080/updatePlayer/" + id + "?name=" + this.fullname.value + "&position=" + this.position.value
     + "&age=" + this.age.value + "&nationality=" + this.nationality.value)
     .then(res => {
         console.log("RES: ", res);
